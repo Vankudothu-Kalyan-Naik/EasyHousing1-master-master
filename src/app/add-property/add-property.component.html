@@ -1,0 +1,70 @@
+<!-- <p>add-doctor works!</p> -->
+<h2>Add New Property</h2>
+<hr>
+<div class="row">
+  <div class="col-md-5">
+
+    <form autocomplete="off" #propertyForm="ngForm" (ngSubmit)="onSubmit(propertyForm)">
+      <!--Movie Name-->
+      <div class="mb-2">
+        <label>Property Name</label>
+        <input type="text" name="propertyname" class="form-control" [(ngModel)]="buy-propertyService.propertyData.propertyname"
+        placeholder="Enter property Name"
+          #propertyname="ngModel" required [class.is-invalid]="propertyname.invalid && propertyname.touched">
+      </div>
+
+      <!--Genre Name-->
+      <div class="mb-2">
+        <label>Property type</label>
+        <input type="text" name="propertytype" class="form-control" [(ngModel)]="buy-propertyService.propertyData.propertytype"
+          #propertytype="ngModel" required [class.is-invalid]="propertytype.invalid && propertytype.touched">
+      </div>
+
+      <!--Synopsis-->
+      <div class="mb-2">
+        <label>Description</label>
+        <input type="text" name="description" class="form-control" [(ngModel)]="buy-propertyService.propertyData.description"
+          #description="ngModel" required [class.is-invalid]="description.invalid && description.touched">
+      </div>
+
+      <!--Runtime-->
+
+
+      <!--Rating-->
+      <div class="mb-2">
+        <label>Address</label>
+        <input type="text" name="address" class="form-control" [(ngModel)]="buy-propertyService.propertyData.address"
+          #address="ngModel" required [class.is-invalid]="address.invalid && address.touched">
+      </div>
+
+      <!--Release Date-->
+      <div class="mb-2">
+        <label>Price Range</label>
+        <input type="text" name="pricerange" class="form-control" [(ngModel)]="buy-propertyService.propertyData.pricerange"
+          #pricerange="ngModel" required [class.is-invalid]="pricerange.invalid && pricerange.touched">
+      </div>
+      <div class="mb-2">
+        <label>State</label>
+        <input type="text" name="state" class="form-control" [(ngModel)]="buy-propertyService.propertyData.state"
+          #state="ngModel" required [class.is-invalid]="state.invalid && state.touched">
+      </div>
+      <div class="mb-2">
+        <label>Seller Name</label>
+        <input type="text" name="sellername" class="form-control" [(ngModel)]="buy-propertyService.propertyData.sellername"
+          #sellername="ngModel" required [class.is-invalid]="sellername.invalid && sellername.touched">
+      </div>
+      <div class="mb-2">
+        <label>Seller Mobile No</label>
+        <input type="text" name="sellermobileno" class="form-control" [(ngModel)]="buy-propertyService.propertyData.sellermobileno"
+          #sellermobileno="ngModel" required [class.is-invalid]="sellermobileno.invalid && sellermobileno.touched">
+      </div>
+
+
+      <div class="mb-2">
+        <button  type="submit" class="btn btn-dark">Submit</button>
+        <button type="reset" class="btn btn-danger mx-2">Reset</button>
+      </div>
+
+    </form>
+  </div>
+</div>
